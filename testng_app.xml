@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="suite" parallel="tests" thread-count="2">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="com.lemon.listener.RepostListener"/>
+    <listener class-name="com.lemon.listener.RetryListener"/>
+  </listeners>
+  <test name="test_登录测试1">
+    <parameter name="deviceName" value="192.168.19.101:5555"/>
+    <parameter name="appPackage" value="com.lemon.lemonban"/>
+    <parameter name="platformName" value="Android"/>
+    <parameter name="automator2_port" value="8200"/>
+    <parameter name="appActivity" value="com.lemon.lemonban.activity.WelcomeActivity"/>
+    <parameter name="appiumUrl" value="http://127.0.0.1:4723/wd/hub"/>
+    <classes>
+      <class name="com.lemon.cases.Logintest"/>
+    </classes>
+  </test>
+  <test name="test_登录测试2">
+    <parameter name="deviceName" value="192.168.19.102:5555"/>
+    <parameter name="appPackage" value="com.lemon.lemonban"/>
+    <parameter name="platformName" value="Android"/>
+    <parameter name="automator2_port" value="8202"/>
+    <parameter name="appActivity" value="com.lemon.lemonban.activity.WelcomeActivity"/>
+    <parameter name="appiumUrl" value="http://127.0.0.1:4725/wd/hub"/>
+    <classes>
+      <class name="com.lemon.cases.Logintest"/>
+    </classes>
+  </test>
+</suite>

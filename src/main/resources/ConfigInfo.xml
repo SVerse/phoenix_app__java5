@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+    <platformName value = "Android"></platformName>
+    <appPackage value= "com.lemon.lemonban"></appPackage>
+    <appActivity value = "com.lemon.lemonban.activity.WelcomeActivity"></appActivity>
+    <testName value = "登录测试"></testName>
+    <classes>
+	  <class name="com.lemon.cases.Logintest"></class>
+	</classes>
+</configs>
+    
